@@ -1,0 +1,11 @@
+.imagem2{
+    
+    background-image:url(https://img3.goodfon.com/wallpaper/nbig/e/94/psychedelic-fractals.jpg);
+    background-repeat: no-repeat; width:100vh; min-height:100vh; background-size:cover; background-Position:center;
+}
+.textos2{
+    font-weight: bold !important;
+}
+.btnCancelar{
+    margin-right: 50px !important;
+}
