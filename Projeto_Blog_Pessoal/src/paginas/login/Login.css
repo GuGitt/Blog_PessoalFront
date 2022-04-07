@@ -1,18 +1,16 @@
 .textos1{
-    font-weight:bold !important;
+   font-weight: bold !important;
 }
+
 .imagem{
-    
-        background-image:url(https://img3.goodfon.com/wallpaper/nbig/e/94/psychedelic-fractals.jpg);
-        background-repeat: no-repeat; width:100vh; min-height:100vh; background-size:cover; background-Position:center;
- 
+    background-image: url(https://i.pinimg.com/originals/fb/49/f7/fb49f70a83706eb7d95661a3be66ac6b.jpg);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
 }
-
-
-
-
-
 
 .text-decorator-none{
-    text-decoration:none
+    text-decoration: none;
 }

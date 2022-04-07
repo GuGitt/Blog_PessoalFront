@@ -1,15 +1,22 @@
-.caixa {
+.caixa{
     background-color: #3F51B5;
 }
+
 .titulo{
-    color: white !important;
-    font-weight: bold !important;
+   color: white !important;
+   font-weight: bold !important;
 }
+
 .botao{
     border-color: white !important;
-    background-color: #3F51B5; 
-    color: white;
+    background-color: #3F51B5;
+    color: white !important;
 }
-.postagem{
+
+.postagens{
     background-color: white;
+}
+
+.text-decorator-none{
+    text-decoration: none;
 }
