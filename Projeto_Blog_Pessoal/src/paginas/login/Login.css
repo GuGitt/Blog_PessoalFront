@@ -1,14 +1,22 @@
 .textos1{
-   font-weight: bold !important;
+    font-weight: bold !important;
+    text-align: center;
+    color: black !important;
 }
 
 .imagem{
-    background-image: url(https://i.pinimg.com/originals/fb/49/f7/fb49f70a83706eb7d95661a3be66ac6b.jpg);
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
+        background-image: url(https://media4.giphy.com/media/l2Sq6y4V9deyrzG00/giphy.gif?cid=ecf05e47i982i7p85qorkc44hvf40kbky5tljn76ty54al9b&rid=giphy.gif&ct=g);
+        background-repeat: no-repeat;
+        width: 100vh;
+        min-height: 100vh;
+        background-size: cover; 
+        background-position: center;
+}
+
+.botao{
+    border-color: black;
+    color: #ff4f4f ;
+    color: white ;
 }
 
 .text-decorator-none{

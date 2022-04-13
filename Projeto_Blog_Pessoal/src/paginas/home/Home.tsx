@@ -2,36 +2,39 @@ import React, { useEffect } from 'react';
 import {Typography, Box, Grid, Button} from '@material-ui/core';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import { useHistory } from 'react-router-dom';
 import './Home.css';
-import { useHistory } from 'react-router';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../store/tokens/tokensReducer';
-import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 function Home() {
 
     let history = useHistory();
+
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
-      );
-    
+
+    //const token = store.token
+    )
+
     useEffect(() => {
-      if (token == "") {
-        toast.error('Você precisa estar logado', {
-            position: "top-right",
-            autoClose: 2000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: false,
-            theme: "colored",
-            progress: undefined,
-        });
-          history.push("/login")
-  
-      }
-  }, [token])
+        if (token === "") {
+            toast.error("Você precisa estar logado", {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+                theme: "colored",
+                progress: undefined,
+            });
+            history.push("/login")
+
+        }
+    }, [token])
+
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
@@ -44,13 +47,11 @@ function Home() {
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
-                        <Link to="/posts" className="text-decorator-none">
-                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
-                        </Link>
+                        <Button variant="outlined" className='botao'>Ver Postagens</Button>
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://www.pngall.com/wp-content/uploads/2016/04/Fractal-Free-PNG-Image.png" alt="" width="1000px" height="838px" />
+                    <img src="https://www.pngall.com/wp-content/uploads/2016/04/Fractal-Free-PNG-Image.png" alt="" width="500px" height="500px" />
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />

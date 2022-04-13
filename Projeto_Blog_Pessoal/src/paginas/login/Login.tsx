@@ -38,7 +38,7 @@ function Login() {
 
         async function onSubmit(e: ChangeEvent<HTMLFormElement>){
             e.preventDefault();
-            try{
+            try {
                 await login(`/usuarios/logar`, userLogin, setToken)
                 toast.success('Usuário logado com sucesso!', {
                     position: "top-right",
@@ -49,20 +49,20 @@ function Login() {
                     draggable: false,
                     theme: "colored",
                     progress: undefined,
+                });
+                } catch (error) {
+                    toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
+                        position: "top-right",
+                        autoClose: 2000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: false,
+                        theme: "colored",
+                        progress: undefined,
                     });
-            }catch(error){
-                toast.error('Dados do usuário inconsistentes. Erro ao logar!', {
-                    position: "top-right",
-                    autoClose: 2000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: false,
-                    draggable: false,
-                    theme: "colored",
-                    progress: undefined,
-                    });
+                }
             }
-        }
 
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
